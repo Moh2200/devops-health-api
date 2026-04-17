@@ -121,7 +121,6 @@ app.get("/", (_req, res) => {
               <h2>Deployment info</h2>
               <p><strong>Version:</strong> ${process.env.APP_VERSION || "local"}</p>
               <p><strong>Environment:</strong> ${process.env.NODE_ENV || "development"}</p>
-              <p><strong>Commit:</strong> ${process.env.GITHUB_SHA?.slice(0,7) || "unknown"}</p>
             </div>
           </div>
 
@@ -154,7 +153,6 @@ app.get("/info", (_req, res) => {
     app: "devops-health-api",
     environment: process.env.NODE_ENV || "development",
     version: process.env.APP_VERSION || "local",
-    commitSha: process.env.GITHUB_SHA?.slice(0, 7),
     time: new Date().toISOString()
   });
 });

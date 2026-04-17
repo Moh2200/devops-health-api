@@ -18,11 +18,11 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Wait for image to be available
-        run: sleep 180
+        run: sleep 60
 
       - name: Deploy to Container App
         uses: azure/container-apps-deploy-action@v1
         with:
           containerAppName: ca-devops-health-api
           resourceGroup: rg-devops-health-api
-          imageToDeploy: ghcr.io/moh2200/devops-health-api:${{ github.sha }}
+          imageToDeploy: ghcr.io/moh2200/devops-health-api:${{ github.event.workflow_run.head_sha }}

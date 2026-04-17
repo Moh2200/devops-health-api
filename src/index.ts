@@ -8,7 +8,7 @@ app.get("/", (_req, res) => {
   res.json({
     name: "devops-health-api",
     version: process.env.APP_VERSION || "local",
-    message: "API is running v3"
+    message: "API is running v4"
   });
 });
 

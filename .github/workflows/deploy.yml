@@ -28,3 +28,7 @@ jobs:
           containerAppName: ca-devops-health-api
           resourceGroup: rg-devops-health-api
           imageToDeploy: ghcr.io/moh2200/devops-health-api:${{ github.event.workflow_run.head_sha }}
+          environmentVariables: |
+          GITHUB_SHA=${{ github.event.workflow_run.head_sha }}
+          NODE_ENV=production
+          APP_VERSION=1.0.0

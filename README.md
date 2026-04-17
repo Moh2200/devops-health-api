@@ -42,23 +42,7 @@ A reviewer can quickly verify:
 - the CI/CD workflow files
 - the live deployed application
 
-## Architecture overview
-
-Source Code
-↓
-GitHub Repository
-↓
-GitHub Actions
-↓
-Docker Image Build
-↓
-GitHub Container Registry (GHCR)
-↓
-Azure Container Apps
-↓
-Public Live URL
-
-## Architecture (visual)
+## Architecture
 
 ```mermaid
 graph LR

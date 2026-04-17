@@ -17,6 +17,9 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Wait for image to be available
+        run: sleep 60
+
       - name: Deploy to Container App
         uses: azure/container-apps-deploy-action@v1
         with:

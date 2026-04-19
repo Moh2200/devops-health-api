@@ -1,6 +1,9 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
+
 const port = process.env.PORT || 3000;
 
 // Root endpoint
@@ -98,6 +101,12 @@ app.get("/", (_req, res) => {
         </a>
           </p>
 
+          <p>
+            <span>
+              Frontend dashboard will be available here after deployment
+            </span>
+          </p>
+
           <div class="grid">
             <div class="card">
               <h2>What this proves</h2>
@@ -122,12 +131,35 @@ app.get("/", (_req, res) => {
               <p><strong>Version:</strong> ${process.env.APP_VERSION || "local"}</p>
               <p><strong>Environment:</strong> ${process.env.NODE_ENV || "development"}</p>
             </div>
+
+            <div class="card">
+              <h2>Frontend Dashboard</h2>
+              <p>
+                A separate React frontend is deployed to demonstrate real-world system design.
+                It consumes this API and shows live data updates.
+              </p>
+              <ul>
+                <li>Runs independently from backend</li>
+                <li>Deployed on a free hosting platform</li>
+                <li>Demonstrates frontend-backend integration</li>
+              </ul>
+            </div>
           </div>
 
           <div class="card">
             <h2>Delivery flow</h2>
             <code>Code → GitHub → GitHub Actions → Docker Image → GHCR → Azure Container Apps → Live URL</code>
             ${appUrl ? `<p><a href="${appUrl}/health">Open /health</a> · <a href="${appUrl}/info">Open /info</a></p>` : ""}
+          </div>
+
+          <div class="card">
+            <h2>Architecture Flow</h2>
+            <code>
+Browser → Frontend (Vercel) → API (Azure Container Apps)            </code>
+            <p>
+              This flow shows how code changes automatically trigger build, containerization,
+              and deployment to a live cloud environment.
+            </p>
           </div>
 
           <p class="footer">
@@ -149,6 +181,7 @@ app.get("/health", (_req, res) => {
 
 // Info endpoint (verify deployments)
 app.get("/info", (_req, res) => {
+  console.log("INFO ENDPOINT HIT");
   res.json({
     app: "devops-health-api",
     environment: process.env.NODE_ENV || "development",

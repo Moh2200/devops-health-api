@@ -22,7 +22,7 @@ app.get("/", (_req, res) => {
           body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0f172a;
+            background: linear-gradient(180deg, #0f172a 0%, #111827 60%, #020617 100%);
             color: #e2e8f0;
           }
           .container {
@@ -32,20 +32,25 @@ app.get("/", (_req, res) => {
           }
           .badge {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 6px 14px;
             border-radius: 999px;
             background: #1e293b;
-            color: #93c5fd;
-            font-size: 14px;
-            margin-bottom: 16px;
+            color: #60a5fa;
+            font-size: 13px;
+            margin-bottom: 18px;
+            border: 1px solid #334155;
           }
           h1 {
-            font-size: 40px;
+            font-size: 42px;
             margin: 0 0 12px;
+            background: linear-gradient(90deg, #60a5fa, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
           p {
-            line-height: 1.6;
-            color: #cbd5e1;
+            line-height: 1.7;
+            color: #d1d5db;
+            font-size: 15px;
           }
           .grid {
             display: grid;
@@ -56,28 +61,67 @@ app.get("/", (_req, res) => {
           .card {
             background: #111827;
             border: 1px solid #334155;
-            border-radius: 14px;
-            padding: 20px;
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+          .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
           }
           .card h2 {
             margin-top: 0;
             font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+          }
+          .grid .card:nth-child(1) h2 {
+            color: #22c55e;
+          }
+          .grid .card:nth-child(2) h2 {
+            color: #60a5fa;
+          }
+          .grid .card:nth-child(3) h2 {
+            color: #f59e0b;
+          }
+          .grid .card:nth-child(4) h2 {
+            color: #a78bfa;
           }
           code {
             display: block;
-            margin-top: 8px;
-            padding: 10px;
-            border-radius: 8px;
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 10px;
             background: #020617;
-            color: #93c5fd;
+            color: #60a5fa;
+            border: 1px solid #1e293b;
+            font-size: 14px;
             overflow-x: auto;
           }
           a {
-            color: #93c5fd;
+            color: #60a5fa;
             text-decoration: none;
+            font-weight: 600;
+          }
+          a:hover {
+            text-decoration: underline;
           }
           ul {
             padding-left: 18px;
+            color: #cbd5e1;
+          }
+          li {
+            margin-bottom: 6px;
+          }
+          strong {
+            color: #e2e8f0;
+          }
+          .card p {
+            margin: 6px 0;
+          }
+          .card + .card {
+            margin-top: 20px;
           }
           .footer {
             margin-top: 32px;

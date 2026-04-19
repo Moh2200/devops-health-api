@@ -1,3 +1,5 @@
+![CI](https://github.com/Moh2200/devops-health-api/actions/workflows/docker.yml/badge.svg)
+
 # DevOps Health API
 
 A complete DevOps portfolio project demonstrating a full workflow from code to live cloud deployment.

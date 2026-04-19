@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# DevOps Health API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A complete DevOps portfolio project demonstrating a full workflow from code to live cloud deployment.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Demo
 
-## React Compiler
+- Backend (Azure):  
+  https://ca-devops-health-api.gentlecoast-45125362.norwayeast.azurecontainerapps.io
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Frontend Dashboard (Vercel):  
+  https://devops-health-api.vercel.app
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 What this project demonstrates
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js + TypeScript backend
+- Docker containerization
+- GitHub Actions CI/CD pipeline
+- GitHub Container Registry (GHCR)
+- Azure Container Apps deployment
+- Live frontend consuming backend API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ System Architecture
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+User → Frontend (Vercel) → Backend API (Azure Container Apps)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🔄 Delivery Flow (CI/CD)
+
+## Code → GitHub → GitHub Actions → Docker Image → GHCR → Azure Container Apps
+
+## 📡 API Endpoints
+
+- `/health` → basic health check
+- `/info` → runtime information (environment, version, time)
+
+---
+
+## 🧠 Why this project
+
+The goal is to demonstrate practical DevOps and platform engineering skills in a simple, real-world setup:
+
+- Automated build and deployment
+- Container-based architecture
+- Cloud hosting with public access
+- Separation between frontend and backend
+
+---
+
+## 📌 Notes
+
+- Frontend is deployed separately (Vercel) to simulate real production architecture
+- Backend is containerized and deployed on Azure Container Apps
+- CI/CD automatically triggers on every push to `main`
+
+---
+
+## 👨‍💻 Author
+
+Mohammad Abdalmuhsen
+GitHub: https://github.com/Moh2200

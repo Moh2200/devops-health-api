@@ -24,22 +24,25 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const Box = ({ label }: { label: string }) => (
+  const Box = ({ label, color }: { label: string; color: string }) => (
     <div style={{
       padding: "12px 20px",
-      background: "#1e293b",
+      background: color,
       borderRadius: "10px",
       border: "1px solid #475569",
-      minWidth: "250px",
+      minWidth: "200px",
       textAlign: "center",
-      fontWeight: 600
+      fontWeight: 600,
+      boxShadow: "0 6px 20px rgba(0,0,0,0.3)",
     }}>
       {label}
     </div>
   );
 
   const Arrow = () => (
-    <div style={{ fontSize: "20px", color: "#94a3b8" }}>↓</div>
+    <div style={{ fontSize: "20px", color: "#94a3b8", margin: "0 8px" }}>
+      →
+    </div>
   );
 
   return (
@@ -102,18 +105,20 @@ function App() {
 
         <div style={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
+          justifyContent: "center",
+          flexWrap: "wrap",
           alignItems: "center",
           gap: "10px",
           marginTop: "20px"
         }}>
-          <Box label="User Browser" />
+          <Box label="User Browser" color="#1e293b" />
           <Arrow />
-          <Box label="Frontend (Vercel)" />
+          <Box label="Frontend (Vercel)" color="#1e3a8a" />
           <Arrow />
-          <Box label="Backend API (Azure)" />
+          <Box label="Backend API (Azure)" color="#064e3b" />
           <Arrow />
-          <Box label="Docker + CI/CD (GitHub Actions)" />
+          <Box label="CI/CD + Docker (GitHub Actions)" color="#4c1d95" />
         </div>
       </div>
 

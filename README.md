@@ -2,54 +2,68 @@
 
 # DevOps Health API
 
-A small but complete DevOps portfolio project built to demonstrate the full journey from source code to a live cloud deployment.
+A complete DevOps portfolio project demonstrating a full workflow from code to live cloud deployment.
 
-## What this project shows
+---
+
+## 🔗 Live Demo
+
+- Backend (Azure):  
+  https://ca-devops-health-api.gentlecoast-45125362.norwayeast.azurecontainerapps.io
+
+- Frontend Dashboard (Vercel):  
+  https://devops-health-api.vercel.app
+
+---
+
+## 🚀 What this project demonstrates
 
 - Node.js + TypeScript backend
 - Docker containerization
-- GitHub Actions CI pipeline
+- GitHub Actions CI/CD pipeline
 - GitHub Container Registry (GHCR)
 - Azure Container Apps deployment
-- Public live URL for easy CV verification
+- Live frontend consuming backend API
 
-## Live demo
+---
 
-- App: https://ca-devops-health-api.gentlecoast-45125362.norwayeast.azurecontainerapps.io
-- Health check: https://ca-devops-health-api.gentlecoast-45125362.norwayeast.azurecontainerapps.io/health
-- Deployment info: https://ca-devops-health-api.gentlecoast-45125362.norwayeast.azurecontainerapps.io/info
+## ⚙️ System Architecture
 
-## Screenshot
+User → Frontend (Vercel) → Backend API (Azure Container Apps)
 
-### Landing Page
+---
 
-![App Screenshot](./assets/app.png)
+## 🔄 Delivery Flow (CI/CD)
 
-## How to verify
+## Code → GitHub → GitHub Actions → Docker Image → GHCR → Azure Container Apps
 
-1. Open live URL
-2. Check `/info`
-3. Compare commit SHA with latest GitHub commit
+## 📡 API Endpoints
 
-## Why this project exists
+- `/health` → basic health check
+- `/info` → runtime information (environment, version, time)
 
-The goal of this project is not to build a complex business app. The goal is to clearly demonstrate DevOps skills in a simple, easy-to-review project.
+---
 
-A reviewer can quickly verify:
+## 🧠 Why this project
 
-- the source code in this repository
-- the Docker setup
-- the CI/CD workflow files
-- the live deployed application
+The goal is to demonstrate practical DevOps and platform engineering skills in a simple, real-world setup:
 
-## Architecture
+- Automated build and deployment
+- Container-based architecture
+- Cloud hosting with public access
+- Separation between frontend and backend
 
-```mermaid
-graph LR
-A[Code] --> B[GitHub]
-B --> C[GitHub Actions]
-C --> D[Docker Image]
-D --> E[GHCR]
-E --> F[Azure Container Apps]
-F --> G[Live App]
-```
+---
+
+## 📌 Notes
+
+- Frontend is deployed separately (Vercel) to simulate real production architecture
+- Backend is containerized and deployed on Azure Container Apps
+- CI/CD automatically triggers on every push to `main`
+
+---
+
+## 👨‍💻 Author
+
+Mohammad Abdalmuhsen
+GitHub: https://github.com/Moh2200

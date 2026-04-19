@@ -102,9 +102,9 @@ app.get("/", (_req, res) => {
           </p>
 
           <p>
-            <span>
-              Frontend dashboard will be available here after deployment
-            </span>
+            <a href="https://devops-health-api.vercel.app" target="_blank">
+              Open Live Frontend Dashboard
+            </a>
           </p>
 
           <div class="grid">

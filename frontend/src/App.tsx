@@ -24,6 +24,24 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const Box = ({ label }: { label: string }) => (
+    <div style={{
+      padding: "12px 20px",
+      background: "#1e293b",
+      borderRadius: "10px",
+      border: "1px solid #475569",
+      minWidth: "250px",
+      textAlign: "center",
+      fontWeight: 600
+    }}>
+      {label}
+    </div>
+  );
+
+  const Arrow = () => (
+    <div style={{ fontSize: "20px", color: "#94a3b8" }}>↓</div>
+  );
+
   return (
     <div style={{
       minHeight: "100vh",
@@ -72,6 +90,33 @@ function App() {
       >
         Refresh
       </button>
+
+      <div style={{
+        marginTop: "40px",
+        padding: "20px",
+        background: "#111827",
+        borderRadius: "12px",
+        border: "1px solid #334155"
+      }}>
+        <h2 style={{ marginTop: 0 }}>System Architecture</h2>
+
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "10px",
+          marginTop: "20px"
+        }}>
+          <Box label="User Browser" />
+          <Arrow />
+          <Box label="Frontend (Vercel)" />
+          <Arrow />
+          <Box label="Backend API (Azure)" />
+          <Arrow />
+          <Box label="Docker + CI/CD (GitHub Actions)" />
+        </div>
+      </div>
+
     </div>
   );
 }

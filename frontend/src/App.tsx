@@ -5,7 +5,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
-  const [tutorialMode, setTutorialMode] = useState(true);
+  const [tutorialMode] = useState(true);
 
   const fetchInfo = async () => {
     try {

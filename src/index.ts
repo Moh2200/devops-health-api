@@ -201,8 +201,8 @@ app.get("/", (_req, res) => {
             <code>
 Browser → Frontend (Vercel) → API (Azure Container Apps)            </code>
             <p>
-              This flow shows how code changes automatically trigger build, containerization,
-              and deployment to a live cloud environment.
+              This flow shows how the live system works at runtime: the user opens the frontend,
+              the frontend calls the backend API, and the backend returns data to the UI.
             </p>
           </div>
 

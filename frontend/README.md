@@ -33,9 +33,9 @@ User → Frontend (Vercel) → Backend API (Azure Container Apps)
 
 ---
 
-## 🔄 Delivery Flow (CI/CD)
+### 🔄 Delivery Flow (CI/CD)
 
-## Code → GitHub → GitHub Actions → Docker Image → GHCR → Azure Container Apps
+Code → GitHub → GitHub Actions → Docker Image → GHCR → Azure Container Apps
 
 ## 📡 API Endpoints
 

@@ -16,6 +16,16 @@ A complete DevOps portfolio project demonstrating a full workflow from code to l
 
 ---
 
+## 📸 Screenshots
+
+### Frontend Dashboard
+
+![Frontend Screenshot](./frontend/screenshots/frontend.png)
+
+### Backend Landing Page
+
+![Backend Screenshot](./frontend/screenshots/backend.png)
+
 ## 🚀 What this project demonstrates
 
 - Node.js + TypeScript backend
@@ -35,7 +45,7 @@ User → Frontend (Vercel) → Backend API (Azure Container Apps)
 
 ## 🔄 Delivery Flow (CI/CD)
 
-## Code → GitHub → GitHub Actions → Docker Image → GHCR → Azure Container Apps
+Code → GitHub → GitHub Actions → Docker Image → GHCR → Azure Container Apps
 
 ## 📡 API Endpoints
 

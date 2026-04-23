@@ -8,7 +8,7 @@ A complete DevOps portfolio project demonstrating a full workflow from code to l
 
 ## 🔗 Live Demo
 
-- Backend (Azure):  
+- Backend (Azure)(It could take 20s to open):  
   https://ca-devops-health-api.gentlecoast-45125362.norwayeast.azurecontainerapps.io
 
 - Frontend Dashboard (Vercel):  
